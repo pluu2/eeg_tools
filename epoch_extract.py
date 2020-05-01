@@ -41,15 +41,20 @@ class epoch_extract():
       time_stamps_fl.append(float(time_stamps[i]))
     time_stamps_fl=np.array(time_stamps_fl)
     time_stamps_fl=np.round(time_stamps_fl *self.sample_rate)
-    
-    #slice up epochs 
-    start=0 
-    self.epoch={} 
-    for i in range(len(time_stamps_fl)): 
-      end=int(time_stamps_fl[i])
-      self.epoch.update( {i:self.signals[0,start:end]})
+
+    epoch=[dict()] * len(time_stamps_fl)
+
+    start=0    
+    for i in range(len(time_stamps_fl)):  
+      end=int(time_stamps_fl[i]) 
+      for channels in range(len(self.signals)):
+        epoch[i].update({channels: self.signals[channels,start:end]})
+        #print (f'start: ', start, ' end: ' , end)
       start=end
+
     print('extracted epochs')
+
+    self.epoch=epoch
     
   def output(self):
     return [self.epoch,self.final_labels,self.classes]
