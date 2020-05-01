@@ -5,6 +5,8 @@ eeg_extract requires pyEDFlib
 Install it using: 
 pip install pyEDFlib
 
-epoch_extract.read('file name') - Read .edf file 
-epoch_extract.process() - Extract Epochs based on labels, and extracts labels, and ennumerates the labels. 
-epochs, labels= epoch_extract.output() - Output epochs, and labels. 
+1. epoch_extract.read('file name') - Read .edf file 
+
+2. epoch_extract.process() - Extract Epochs based on labels, and extracts labels, and ennumerates the labels. 
+
+3. epochs, labels= epoch_extract.output() - Output epochs, and labels. 
