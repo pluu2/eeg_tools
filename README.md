@@ -5,9 +5,7 @@ This is a rudimentary repository of various tools to work with .edf files and im
 
 ## eeg_extract
 ----
-eeg_extract is a wrapper class for pyEDFlib. The class reads, extracts labels, and epochs. 
-
-eeg_extract requires pyEDFlib 
+eeg_extract is a wrapper class for pyEDFlib. The class reads, extracts labels, and epochs. eeg_extract requires pyEDFlib 
 
 Install pyEDFlib it using: 
 
