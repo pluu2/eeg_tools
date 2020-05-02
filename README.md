@@ -1,16 +1,20 @@
 # EEG Tools
 This is a rudimentary repository of various tools to work with .edf files and import data into python to allow work on ML libraries. 
 
+
+
+## eeg_extract
+----
 eeg_extract is a wrapper class for pyEDFlib. The class reads, extracts labels, and epochs. 
 
-### eeg_extract
 eeg_extract requires pyEDFlib 
+
 Install pyEDFlib it using: 
 
 ```pip install pyEDFlib```
 
-Available functions: 
-
+#### Available functions: 
+-----
 ``` epoch_extract.read('file name') ```  Read .edf file
 
 
