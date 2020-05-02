@@ -17,6 +17,10 @@ Available functions:
 ```epoch_extract.process() ``` - Extract Epochs based on labels, and extracts labels, and ennumerates the labels.
 
 
-```epochs, labels= epoch_extract.output() ```- Output epochs, and labels. 
+```epochs, labels,classes= epoch_extract.output() ```- Output epochs, and labels. 
 
 The structure of the output data will be a dict with the key of structure '[epoch_number]C[channel_number]'
+
+```epoch_extract.make2D (width) ``` Creates a numpy array with structure [epoch_number,channel_number,datapoints] . 
+
+The number of datapoints will have to be specified. 
