@@ -25,3 +25,14 @@ The number of datapoints will have to be specified.
 ```epochs, labels,classes= epoch_extract.output() ```- Output epochs, and labels. 
 
 The structure of the output data will be a dict with the key of structure '[epoch_number]C[channel_number]' - This function has lost some of it's usefulness, 'epochs' as an output is not as important, the make 2D function will make it much easier to work with EEG data. 
+
+## create_graphs
+-----
+Very rough class function. Will take raw EEG data and generate dicts . 
+
+#### Available Functions: 
+----
+```create_graphs.load_data(data) ``` loads the EEG data into the class. The data must be organized [sample,channel,data]
+
+```graph_dict_list=create_graphs.get_graphs(data_slice)```  outputs a list of graph dict data for use in Graph_net library. 
+This function only supports one graph structure. 
