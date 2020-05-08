@@ -31,9 +31,9 @@ class create_graphs():
     self.eeg_data=self.eeg_data.astype('float32')
     self.total_samples=len(data)
     print ('loaded data')
-  def create_graphs_from_data(self,start,end,use_globals=True): 
+  def create_graphs_from_data(self,start,end,sample_num,use_globals=True): 
     #since we don't really known the globals, lets set them to 1? 
-    sample_num=0
+    
     
     globals_ = [1.0,1.0,1.0,1.0]
 
@@ -83,7 +83,7 @@ class create_graphs():
 
     for i in range(self.total_samples):
       for j in range(num_slices):
-        time_stamps.append(self.create_graphs_from_data(start,end))
+        time_stamps.append(self.create_graphs_from_data(start,end,i))
         start=end
         end+=data_slice
       single_samp.append(time_stamps)
