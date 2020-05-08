@@ -28,13 +28,14 @@ class create_graphs():
     #load eeg data
   def load_data(self,data): 
     self.eeg_data=data
+    self.eeg_data=self.eeg_data.astype('float32')
     self.total_samples=len(data)
     print ('loaded data')
   def create_graphs_from_data(self,start,end,use_globals=True): 
     #since we don't really known the globals, lets set them to 1? 
     sample_num=0
     
-    globals_ = [[1],[1],[1],[1]]
+    globals_ = [1.0,1.0,1.0,1.0]
 
     nodes=[self.eeg_data[sample_num,2,start:end],
           self.eeg_data[sample_num,5,start:end],
@@ -42,7 +43,7 @@ class create_graphs():
           self.eeg_data[sample_num,3,start:end],
           self.eeg_data[sample_num,4,start:end]]
       #the edges are not useful, so fil lwith 0 there will be 8 of them, because of the way the graph is connected
-    edges=[[0],[0],[0],[0],[0],[0],[0],[0]]
+    edges=[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
 
       # The sender and receiver nodes associated with each edge for graph 1.
     senders = [0,  # Index of the sender node for edge 0
