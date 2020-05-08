@@ -43,7 +43,7 @@ class create_graphs():
           self.eeg_data[sample_num,3,start:end],
           self.eeg_data[sample_num,4,start:end]]
       #the edges are not useful, so fil lwith 0 there will be 8 of them, because of the way the graph is connected
-    edges=[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+    edges=[[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0]]
 
       # The sender and receiver nodes associated with each edge for graph 1.
     senders = [0,  # Index of the sender node for edge 0
