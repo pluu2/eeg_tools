@@ -316,7 +316,7 @@ class create_graphs():
                  ]  # Index of the receiver node for edge 3
 
     edges=[]
-    for i in range(len(receivers)):
+    for i in range(400): #this will need to be figurd out
       edges.append([[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0]])
 
 
