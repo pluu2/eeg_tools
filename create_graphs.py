@@ -317,7 +317,7 @@ class create_graphs():
 
     edges=[]
     for i in range(len(receivers)):
-      edges.append([0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0])
+      edges.append([[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0]])
 
 
     data_dict={
