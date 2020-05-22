@@ -102,7 +102,7 @@ class create_graphs():
     #since we don't really known the globals, lets set them to 1?  #we will be using a interaction network so globals are not required. 
     
     
-    globals_ = [1.0,1.0,1.0,1.0]
+    globals_ = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
 
     nodes=[self.eeg_data[sample_num,0,start:end],
           self.eeg_data[sample_num,1,start:end],
