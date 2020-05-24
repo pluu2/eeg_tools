@@ -36,3 +36,5 @@ Very rough class function. Will take raw EEG data and generate dicts .
 
 ```graph_dict_list=create_graphs.get_graphs(data_slice)```  outputs a list of graph dict data for use in Graph_net library. 
 This function only supports one graph structure. 
+
+note: there is implementation for tensorflow-graphnets and for pytorch-geometric separately. 
