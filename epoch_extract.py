@@ -51,7 +51,7 @@ class epoch_extract():
         epoch.update({str(i)+'c' + str(channels): self.signals[channels,start:end]})
       start=end
 
-    print('extracted epochs')
+    print(f'extracted ', i, ' epochs')
 
     self.epoch=epoch
   
