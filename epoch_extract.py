@@ -19,7 +19,7 @@ class epoch_extract():
     self.sample_rate=0
     self.final_labels
     self.epoch={} 
-
+    self.test
   def read(self,datafile): 
     self.signals, self.signal_headers, self.header = highlevel.read_edf(datafile)
     self.sample_rate= self.signal_headers[0]['sample_rate']
@@ -41,15 +41,17 @@ class epoch_extract():
       time_stamps_fl.append(float(time_stamps[i]))
     time_stamps_fl=np.array(time_stamps_fl)
     time_stamps_fl=np.round(time_stamps_fl *self.sample_rate)
+    self.test=time_stamps_fl    
 
     
     epoch ={}
     start=0
     ctr=0
-    for i in range(len(time_stamps_fl)):  
+    for i in range(1,len(time_stamps_fl)):  
       end=int(time_stamps_fl[i]) 
+      print (end)
       for channels in range(len(self.signals)):    
-        epoch.update({str(i)+'c' + str(channels): self.signals[channels,start:end]})
+        epoch.update({str(i-1)+ 'c' + str(channels): self.signals[channels,start:end]})
       ctr+=1
       start=end
 
