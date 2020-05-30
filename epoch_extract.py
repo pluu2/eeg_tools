@@ -50,7 +50,7 @@ class epoch_extract():
       end=int(time_stamps_fl[i]) 
       for channels in range(len(self.signals)):    
         epoch.update({str(i)+'c' + str(channels): self.signals[channels,start:end]})
-        ctr+=1
+      ctr+=1
       start=end
 
     print(f'extracted ', ctr, ' epochs')
